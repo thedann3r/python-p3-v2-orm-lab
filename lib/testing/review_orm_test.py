@@ -12,7 +12,7 @@ class TestReview:
         '''drop tables prior to each test.'''
 
         CURSOR.execute("DROP TABLE IF EXISTS reviews")
-        CURSOR.execute("DROP TABLE IF EXISTS employees")
+        CURSOR.execute("DROP TABLE IF EXISTS employees") 
         CURSOR.execute("DROP TABLE IF EXISTS departments")
 
     def test_creates_table(self):

@@ -184,7 +184,17 @@ class Employee:
 
         row = CURSOR.execute(sql, (name,)).fetchone()
         return cls.instance_from_db(row) if row else None
-
+    
     def reviews(self):
-        """Return list of reviews associated with current employee"""
-        pass
+        """Fetch and return a list of Review instances associated with this Employee."""
+        from review import Review
+        if not self.id:
+            raise ValueError("Employee must have a valid ID to fetch reviews.")
+        
+        sql = """
+            SELECT *
+            FROM reviews
+            WHERE employee_id = ?
+        """
+        rows = CURSOR.execute(sql, (self.id,)).fetchall()
+        return [Review.instance_from_db(row) for row in rows]

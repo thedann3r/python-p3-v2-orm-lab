@@ -6,7 +6,7 @@ import pytest
 class TestDepartment:
     '''Class Department in department.py'''
 
-    @pytest.fixture(autouse=True)
+    @pytest.fixture(autouse=True) 
     def drop_tables(self):
         '''drop tables prior to each test.'''
 

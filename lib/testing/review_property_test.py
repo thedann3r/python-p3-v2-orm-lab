@@ -11,7 +11,7 @@ class TestReviewProperties:
     def reset_db(self):
         '''drop and recreate tables prior to each test.'''
         Review.drop_table()
-        Employee.drop_table()
+        Employee.drop_table() 
         Department.drop_table()
         Department.create_table()
         Employee.create_table()

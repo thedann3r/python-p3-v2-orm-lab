@@ -9,7 +9,7 @@ class Department:
 
     def __init__(self, name, location, id=None):
         self.id = id
-        self.name = name
+        self.name = name 
         self.location = location
 
     def __repr__(self):

@@ -9,7 +9,7 @@ class TestDepartmentProperties:
     def clear_dictionary(self):
         '''clear out the class dictionary.'''
         Department.all = {}
-
+ 
     def test_name_location_valid(self):
         '''validates name and location assigned valid non-empty strings'''
         # should not throw an exception

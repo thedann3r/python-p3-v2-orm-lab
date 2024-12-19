@@ -10,7 +10,7 @@ class TestEmployeeProperties:
     def reset_db(self):
         '''drop and recreate tables prior to each test.'''
         Employee.drop_table()
-        Department.drop_table()
+        Department.drop_table() 
         Employee.create_table()
         Department.create_table()
         # clear the object cache
